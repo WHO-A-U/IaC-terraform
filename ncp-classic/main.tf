@@ -1,4 +1,9 @@
-
+provider "ncloud" {
+  access_key = var.access_key
+  secret_key = var.secret_key
+  region     = var.region
+  site = "www.ncloud.com"
+}
 
 data "template_file" "user_data" {
   template = templatefile("user-data.sh", {})
